@@ -1,0 +1,221 @@
+:root {
+  --primary-color: #006400; /* Ethiopian Green */
+  --secondary-color: #FCDD09; /* Ethiopian Yellow */
+  --accent-color: #DA121A; /* Ethiopian Red */
+  --bg-color: #f4f7f6;
+  --card-bg: #ffffff;
+  --text-color: #333333;
+  --text-light: #666666;
+  --border-radius: 12px;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 30px;
+  margin-bottom: 30px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #004d00;
+}
+
+.btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background-color: #d0d0d0;
+}
+
+.upload-area {
+  border: 2px dashed #ccc;
+  border-radius: var(--border-radius);
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.upload-area:hover {
+  border-color: var(--primary-color);
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f9f9f9;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-pending {
+  background-color: #eee;
+  color: #666;
+}
+
+.status-success {
+  background-color: #e6f4ea;
+  color: #1e7e34;
+}
+
+.status-error {
+  background-color: #fbe9e7;
+  color: #d93025;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.config-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.log-area {
+  max-height: 200px;
+  overflow-y: auto;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.log-item {
+  margin-bottom: 5px;
+}
+
+.log-success { color: green; }
+.log-error { color: red; }
+
+input[readonly] {
+  background-color: #f5f5f5;
+  color: var(--text-light);
+  cursor: default;
+  border-color: #e0e0e0;
+}
+
+input[readonly]:focus {
+  border-color: #e0e0e0;
+  outline: none;
+}
+
